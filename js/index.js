@@ -80,14 +80,8 @@ const secondP = firstP.nextElementSibling;
 secondP.textContent = siteContent['contact']['phone']; 
 const thirdP = secondP.nextElementSibling;
 thirdP.textContent = siteContent['contact']['email']; 
-
-
-
-
-
-
-
-
+const footer = document.querySelector('footer'); 
+footer.textContent = siteContent['footer']['copyright']; 
 
 
 
