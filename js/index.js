@@ -11,8 +11,9 @@ const siteContent = {
   "cta": {
     "h1": "DOM Is Awesome",
     "button": "Get Started",
-    "clicked button": "Good Job!", 
-    "img-src": "img/header-img.png"
+    "clicked button": "Outstanding Clicking!", 
+    "img-src": "img/header-img.png",
+    "second img": "/img/surprise.jpg"
   },
   "main-content": {
     "features-h4":"Features",
@@ -80,8 +81,10 @@ button.textContent = siteContent['cta']['button'];
 button.addEventListener('click', () => {
   if (button.textContent === siteContent['cta']['button']) {
   button.textContent = siteContent['cta']['clicked button']; 
+  ctaImg.src = siteContent['cta']['second img']; 
   } else {
     button.textContent = siteContent['cta']['button']; 
+    ctaImg.src = siteContent['cta']['img-src']; 
   }
 })
 const ctaImg = document.getElementById('cta-img'); 
