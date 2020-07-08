@@ -41,10 +41,12 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]); 
 
-const nav = document.querySelector('nav')
-
+const nav = document.querySelector('nav');
 const navItemOne = nav.firstElementChild;
+const greenLink = document.querySelectorAll('a');
+greenLink.forEach(element => element.style.color = 'green'); 
 navItemOne.textContent = siteContent["nav"]["nav-item-1"];
+navItemOne.style.color = 'green'; 
 const navItemTwo = navItemOne.nextElementSibling;
 navItemTwo.textContent = siteContent['nav']['nav-item-2']; 
 const navItemThree = navItemTwo.nextElementSibling;
@@ -81,7 +83,9 @@ secondP.textContent = siteContent['contact']['phone'];
 const thirdP = secondP.nextElementSibling;
 thirdP.textContent = siteContent['contact']['email']; 
 const footer = document.querySelector('footer'); 
-footer.textContent = siteContent['footer']['copyright']; 
+const footerP = footer.firstElementChild;
+footerP.textContent = siteContent['footer']['copyright']; 
+
 
 
 
