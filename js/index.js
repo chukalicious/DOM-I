@@ -63,7 +63,15 @@ h1.textContent = siteContent['cta']['h1'];
 const button = h1.nextElementSibling;
 button.textContent = siteContent['cta']['button']; 
 const ctaImg = document.getElementById('cta-img'); 
-ctaImg.src = siteContent['cta']['img-src']
+ctaImg.src = siteContent['cta']['img-src'];
+const mainContent = document.querySelector('.main-content'); 
+const topContent = document.querySelector('.top-content'); 
+const textContent = document.querySelectorAll('.text-content'); 
+textContent.forEach(element => element.firstElementChild.textContent = siteContent['main-content']['features-h4']); 
+textContent.forEach(element => element.lastElementChild.textContent = siteContent['main-content']['features-content']);
+
+
+
 
 
 
