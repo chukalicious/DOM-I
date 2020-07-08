@@ -69,7 +69,8 @@ const topContent = document.querySelector('.top-content');
 const textContent = document.querySelectorAll('.text-content'); 
 textContent.forEach(element => element.firstElementChild.textContent = siteContent['main-content']['features-h4']); 
 textContent.forEach(element => element.lastElementChild.textContent = siteContent['main-content']['features-content']);
-
+const middleImg = document.querySelector('#middle-img'); 
+middleImg.src = siteContent['main-content']['middle-img-src']; 
 
 
 
