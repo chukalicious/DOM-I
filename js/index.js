@@ -43,10 +43,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 const nav = document.querySelector('nav');
 const navItemOne = nav.firstElementChild;
-const greenLink = document.querySelectorAll('a');
-greenLink.forEach(element => element.style.color = 'green'); 
 navItemOne.textContent = siteContent["nav"]["nav-item-1"];
-navItemOne.style.color = 'green'; 
 const navItemTwo = navItemOne.nextElementSibling;
 navItemTwo.textContent = siteContent['nav']['nav-item-2']; 
 const navItemThree = navItemTwo.nextElementSibling;
@@ -57,8 +54,15 @@ const navItemFive = navItemFour.nextElementSibling;
 navItemFive.textContent = siteContent['nav']['nav-item-5'];
 const navItemSix = navItemFive.nextElementSibling;
 navItemSix.textContent = siteContent['nav']['nav-item-6'];
-
-const cta = document.querySelector('.cta'); 
+const firstA = document.createElement('a');
+firstA.textContent = 'First Link';
+nav.prepend(firstA); 
+const lastA = document.createElement('a');
+lastA.textContent = 'Last Link'; 
+nav.appendChild(lastA); 
+const greenLink = document.querySelectorAll('a');
+greenLink.forEach(element => element.style.color = 'green'); 
+const cta = document.querySelector('.cta');
 const ctaText = document.querySelector('.cta-text');
 const h1 = ctaText.firstElementChild;
 h1.textContent = siteContent['cta']['h1']; 
