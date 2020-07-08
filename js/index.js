@@ -47,5 +47,18 @@ const navItemOne = nav.firstElementChild;
 navItemOne.textContent = siteContent["nav"]["nav-item-1"];
 const navItemTwo = navItemOne.nextElementSibling;
 navItemTwo.textContent = siteContent['nav']['nav-item-2']; 
+const navItemThree = navItemTwo.nextElementSibling;
+navItemThree.textContent = siteContent['nav']['nav-item-3']; 
+const navItemFour = navItemThree.nextElementSibling;
+navItemFour.textContent = siteContent['nav']['nav-item-4'];
+const navItemFive = navItemFour.nextElementSibling;
+navItemFive.textContent = siteContent['nav']['nav-item-5'];
+const navItemSix = navItemFive.nextElementSibling;
+navItemSix.textContent = siteContent['nav']['nav-item-6'];
+
+
+
+
+
 
 
