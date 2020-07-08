@@ -62,6 +62,14 @@ lastA.textContent = 'Last Link';
 nav.appendChild(lastA); 
 const greenLink = document.querySelectorAll('a');
 greenLink.forEach(element => element.style.color = 'green'); 
+greenLink.forEach(element => element.style.padding = '1rem'); 
+greenLink.forEach(element => element.addEventListener('mouseenter', () => {
+  element.style.backgroundColor = 'lightblue'
+}));
+greenLink.forEach(element => element.addEventListener('mouseleave', () => {
+  element.style.backgroundColor = '#fff'
+}));
+
 const cta = document.querySelector('.cta');
 const ctaText = document.querySelector('.cta-text');
 const h1 = ctaText.firstElementChild;
