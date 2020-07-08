@@ -56,6 +56,22 @@ navItemFive.textContent = siteContent['nav']['nav-item-5'];
 const navItemSix = navItemFive.nextElementSibling;
 navItemSix.textContent = siteContent['nav']['nav-item-6'];
 
+const cta = document.querySelector('.cta'); 
+const ctaText = document.querySelector('.cta-text');
+const h1 = ctaText.firstElementChild;
+h1.textContent = siteContent['cta']['h1']; 
+const button = h1.nextElementSibling;
+button.textContent = siteContent['cta']['button']; 
+const ctaImg = document.getElementById('cta-img'); 
+ctaImg.src = siteContent['cta']['img-src']
+
+
+
+
+
+
+
+
 
 
 
