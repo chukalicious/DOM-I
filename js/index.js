@@ -62,7 +62,7 @@ lastA.textContent = 'Last Link';
 nav.appendChild(lastA); 
 const greenLink = document.querySelectorAll('a');
 greenLink.forEach(element => element.style.color = 'green'); 
-greenLink.forEach(element => element.style.padding = '1rem'); 
+greenLink.forEach(element => element.style.padding = '.5rem'); 
 greenLink.forEach(element => element.addEventListener('mouseenter', () => {
   element.style.backgroundColor = 'lightblue'
 }));
@@ -76,6 +76,13 @@ const h1 = ctaText.firstElementChild;
 h1.textContent = siteContent['cta']['h1']; 
 const button = h1.nextElementSibling;
 button.textContent = siteContent['cta']['button']; 
+button.addEventListener('click', () => {
+  if (button.textContent === siteContent['cta']['button']) {
+  button.textContent = 'Good Job!'; 
+  } else {
+    button.textContent = siteContent['cta']['button']; 
+  }
+})
 const ctaImg = document.getElementById('cta-img'); 
 ctaImg.src = siteContent['cta']['img-src'];
 const mainContent = document.querySelector('.main-content'); 
