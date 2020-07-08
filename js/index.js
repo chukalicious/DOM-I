@@ -11,6 +11,7 @@ const siteContent = {
   "cta": {
     "h1": "DOM Is Awesome",
     "button": "Get Started",
+    "clicked button": "Good Job!", 
     "img-src": "img/header-img.png"
   },
   "main-content": {
@@ -78,7 +79,7 @@ const button = h1.nextElementSibling;
 button.textContent = siteContent['cta']['button']; 
 button.addEventListener('click', () => {
   if (button.textContent === siteContent['cta']['button']) {
-  button.textContent = 'Good Job!'; 
+  button.textContent = siteContent['cta']['clicked button']; 
   } else {
     button.textContent = siteContent['cta']['button']; 
   }
