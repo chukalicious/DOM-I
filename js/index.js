@@ -71,6 +71,17 @@ textContent.forEach(element => element.firstElementChild.textContent = siteConte
 textContent.forEach(element => element.lastElementChild.textContent = siteContent['main-content']['features-content']);
 const middleImg = document.querySelector('#middle-img'); 
 middleImg.src = siteContent['main-content']['middle-img-src']; 
+const contact = document.querySelector('.contact'); 
+const contactH4 = contact.firstElementChild;
+contactH4.textContent = siteContent['contact']['contact-h4']; 
+const firstP = contactH4.nextElementSibling;
+firstP.textContent = siteContent['contact']['address']; 
+const secondP = firstP.nextElementSibling;
+secondP.textContent = siteContent['contact']['phone']; 
+const thirdP = secondP.nextElementSibling;
+thirdP.textContent = siteContent['contact']['email']; 
+
+
 
 
 
