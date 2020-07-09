@@ -97,6 +97,7 @@ button.addEventListener('click', () => {
   if (button.textContent === siteContent['cta']['button']) {
   button.textContent = siteContent['cta']['clicked button']; 
   ctaImg.src = catContent['cat-cta']['second img'];
+  roundedImg();
   middleImg.src = catContent['main-content']['cat-middle-image']; 
   textContent.forEach(element => element.firstElementChild.textContent = catContent['main-content']['cat-h4']); 
   h1.textContent = catContent['cat-cta']['cat-h1']; 
@@ -173,6 +174,14 @@ const footer = document.querySelector('footer');
 const footerP = footer.firstElementChild;
 footerP.textContent = siteContent['footer']['copyright']; 
 
+const roundedImg = () => {
+  if(ctaImg.src = '/img/surprise.jpg') {
+    ctaImg.style.height = '400px'; 
+    ctaImg.style.width = '400px'; 
+    ctaImg.style.borderRadius = '50%'; 
+  }
+}
+ 
 
 
 
