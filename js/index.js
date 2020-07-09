@@ -99,6 +99,7 @@ button.addEventListener('click', () => {
   ctaImg.src = catContent['cat-cta']['second img'];
   middleImg.src = catContent['main-content']['cat-middle-image']; 
   textContent.forEach(element => element.firstElementChild.textContent = catContent['main-content']['cat-h4']); 
+  h1.textContent = catContent['cat-cta']['cat-h1']; 
   textContent.forEach(element => element.lastElementChild.textContent = catContent['main-content']['cat-featured-content']);
 
   } else {
