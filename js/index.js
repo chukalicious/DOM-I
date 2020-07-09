@@ -13,7 +13,6 @@ const siteContent = {
     "button": "Get Started",
     "clicked button": "Outstanding Clicking!", 
     "img-src": "img/header-img.png",
-    "second img": "/img/surprise.jpg"
   },
   "main-content": {
     "features-h4":"Features",
@@ -38,6 +37,20 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+
+const catContent = {
+  "cat-cta": {
+    "cat-h1": "Kitties have taken over!", 
+    "second img": "/img/surprise.jpg"
+  },
+  "main-content": {
+    "cat-h4": "Walk on a keyboard walk on keyboard hit you unexpectedly",
+    "cat-featured-content": "Cat ipsum dolor sit amet, i will be pet i will be pet and then i will hiss walk on keyboard. Pose purrfectly to show my beauty wake up human for food at 4am rub my belly hiss loves cheeseburgers so really likes hummus. Meow and walk away.",
+    "cat-middle-image": "/img/Cat-Banner-medium23.jpg"
+  }
+  
+
+}
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
@@ -72,6 +85,8 @@ greenLink.forEach(element => element.addEventListener('mouseleave', () => {
   element.style.backgroundColor = '#fff'
 }));
 
+
+//////CALL TO ACTION SECTION
 const cta = document.querySelector('.cta');
 const ctaText = document.querySelector('.cta-text');
 const h1 = ctaText.firstElementChild;
@@ -81,21 +96,68 @@ button.textContent = siteContent['cta']['button'];
 button.addEventListener('click', () => {
   if (button.textContent === siteContent['cta']['button']) {
   button.textContent = siteContent['cta']['clicked button']; 
-  ctaImg.src = siteContent['cta']['second img']; 
+  ctaImg.src = catContent['cat-cta']['second img'];
+  middleImg.src = catContent['main-content']['cat-middle-image']; 
+  textContent.forEach(element => element.firstElementChild.textContent = catContent['main-content']['cat-h4']); 
+  textContent.forEach(element => element.lastElementChild.textContent = catContent['main-content']['cat-featured-content']);
+
   } else {
     button.textContent = siteContent['cta']['button']; 
     ctaImg.src = siteContent['cta']['img-src']; 
+    topText(); 
+    middleImg.src = siteContent['main-content']['middle-img-src'];
+    bottomText(); 
   }
 })
 const ctaImg = document.getElementById('cta-img'); 
-ctaImg.src = siteContent['cta']['img-src'];
-const mainContent = document.querySelector('.main-content'); 
-const topContent = document.querySelector('.top-content'); 
+ctaImg.src = siteContent['cta']['img-src']; 
+
+///////MAIN CONTENT SECTION
+const mainContent = document.querySelector('.main-content');
 const textContent = document.querySelectorAll('.text-content'); 
-textContent.forEach(element => element.firstElementChild.textContent = siteContent['main-content']['features-h4']); 
-textContent.forEach(element => element.lastElementChild.textContent = siteContent['main-content']['features-content']);
+
+//////TOP CONTENT
+const topText = () => {
+  const topContent = document.querySelector('.top-content');
+  const features = topContent.firstElementChild; 
+  const featuresH4 = features.firstElementChild;
+  featuresH4.textContent = siteContent['main-content']['features-h4'];
+  const featuresTextContent = featuresH4.nextElementSibling;
+  featuresTextContent.textContent = siteContent['main-content']['features-content']; 
+  const about = features.nextElementSibling;
+  const aboutH4 = about.firstElementChild; 
+  aboutH4.textContent = siteContent['main-content']['about-h4']; 
+  const aboutTextContent = aboutH4.nextElementSibling;
+  aboutTextContent.textContent = siteContent['main-content']['about-content']; 
+}
+topText(); 
+
+//////MIDDLE IMG
 const middleImg = document.querySelector('#middle-img'); 
-middleImg.src = siteContent['main-content']['middle-img-src']; 
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
+/////BOTTOM CONTENT
+const bottomText = () => {
+  const bottomContent = document.querySelector('.bottom-content'); 
+  const services = bottomContent.firstElementChild;
+  const servicesH4 = services.firstElementChild;
+  servicesH4.textContent = siteContent['main-content']['services-h4'];
+  const servicesTextContent = servicesH4.nextElementSibling;
+  servicesTextContent.textContent = siteContent['main-content']['services-content'];
+  const product = services.nextElementSibling; 
+  const productH4 = product.firstElementChild;
+  productH4.textContent = siteContent['main-content']['product-h4']; 
+  const productTextContent = productH4.nextElementSibling;
+  productTextContent.textContent = siteContent['main-content']['product-content'];
+  const vision = product.nextElementSibling;
+  const visionH4 = vision.firstElementChild;
+  visionH4.textContent = siteContent['main-content']['vision-h4'];
+  const visionTextContent = visionH4.nextElementSibling;
+  visionTextContent.textContent = siteContent['main-content']['vision-content'];
+}
+bottomText(); 
+
+///CONTACT
 const contact = document.querySelector('.contact'); 
 const contactH4 = contact.firstElementChild;
 contactH4.textContent = siteContent['contact']['contact-h4']; 
