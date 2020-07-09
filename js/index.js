@@ -104,6 +104,7 @@ button.addEventListener('click', () => {
 
   } else {
     button.textContent = siteContent['cta']['button']; 
+    h1.textContent = siteContent['cta']['h1']; 
     ctaImg.src = siteContent['cta']['img-src']; 
     topText(); 
     middleImg.src = siteContent['main-content']['middle-img-src'];
